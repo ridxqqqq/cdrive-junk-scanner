@@ -1,6 +1,8 @@
-# Windows 脚本保持原始字节：.bat 按原样存储（保留 CRLF，防止 cmd 解析异常）
-*.bat -text
-# PowerShell 脚本统一 CRLF
-*.ps1 text eol=crlf
-# 其他文本文件自动处理
+# 默认：文本文件自动处理换行
 * text=auto
+
+# Windows 脚本保持原始字节：.bat 按工作区原样存储（保留 CRLF，防止 cmd 解析异常）
+*.bat -text
+
+# PowerShell 脚本统一 CRLF 检出（索引内 LF，检出时转 CRLF）
+*.ps1 text eol=crlf
